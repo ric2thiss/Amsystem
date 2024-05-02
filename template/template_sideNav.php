@@ -13,6 +13,7 @@ function template_sideNav($title){
     $pedingPostClass = ($title == "pending-post") ? "active" : "";
     $profileClass = ($title == "profile") ? "active" : "";
     $publishedPostClass = ($title == "published-post") ? "active" : "";
+    $newsfeedPostClass = ($title == "newsfeed") ? "active" : "";
 
     $userData = get_account_all_information($_SESSION["user_id"]);
 
@@ -38,6 +39,10 @@ function template_sideNav($title){
                     <a class="nav-link ' . $publishedPostClass . '" href="published-post.php">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-check"></i></div>
                         Published Post
+                    </a>
+                    <a class="nav-link ' . $newsfeedPostClass . '" href="newsfeed.php">
+                        <div class="sb-nav-link-icon"><i class="fa-regular fa-comment"></i></div>
+                        Newsfeed
                     </a>
                     <a class="nav-link ' . $profileClass . '" href="profile.php">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>

@@ -31,25 +31,31 @@
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
-                                    <thead>
+                                <thead>
                                         <tr>
                                             <th>Post ID</th>
-                                            <th>USERID</th>
+                                            <th>USER ID</th>
+                                            <th>Name</th>
+                                            <th>Title</th>
                                             <th>Department</th>
-                                            <th>Message Post</th>
-                                            <th>Time / Date</th>
+                                            <th>Description</th>
+                                            <th>Date / Time</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php 
                                         foreach($posts as $post){
+                                            $accountname = get_account_name($post["USERID"]);
+                                            $_GET["id"]= $post['POST_ID'];
                                             echo '
                                             <tr>
                                                 <td>'.$post["POST_ID"].'</td>
                                                 <td>'.$post["USERID"].'</td>
-                                                <td>'.$post["POST_DEPARTMENTORG"].'</td>
-                                                <td>'.$post["POST_DESCRIPTION"].'</td>
+                                                <td>'.$accountname.'</td>
+                                                <td>'.$post["POST_TITLE"].'</td>
+                                        <td>'.$post["POST_DEPARTMENTORG"].'</td>
+                                        <td>'.$post["POST_DESCRIPTION"].'</td>
                                                 <td>'.$post["post_date"].'</td>
                                                     <td>
                                                     <a href="">Archive</a><br>

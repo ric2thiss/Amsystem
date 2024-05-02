@@ -3,7 +3,7 @@
 
 function get_all_post() {
     // Retrieve user data
-    $userData = get_account_all_information($_SESSION["user_id"]);
+    // $userData = get_account_all_information($_SESSION["user_id"]);
 
 
     $posts = getAllPost_published();
@@ -17,8 +17,9 @@ function get_all_post() {
             
             // Render the post HTML
             echo '
-            <div class="card mb-4">
-                <p style="font-size:11px;">Posted by: <strong style="text-transform: uppercase;">'.$accountname.'</strong></p>
+            <div class="card mb-4 p-4">
+                <p style="font-size:11px;text-decoration: underline;">Posted by: <strong style="text-transform: uppercase;">'.$accountname.'</strong></p>
+                <p style="font-size:9px; margin-top : -1rem;">'.$post['post_date'].'</p>
                 <div class="card-body">
                     <h5 class="card-title"> '.$post['POST_TITLE'].'</h5>
                     <p class="card-text">'.$post['POST_DESCRIPTION'].'</p>
