@@ -66,7 +66,7 @@ function template_sideNav($title){
                     <div class="sb-sidenav-menu-heading">Menu</div>
                     <a class="nav-link  ' . $dashboardClass . '" href="newsfeed.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Dashboard
+                        Newsfeed
                     </a>
                     <a class="nav-link ' . $writePostClass . '" href="write-post.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-pen-to-square"></i></div>
