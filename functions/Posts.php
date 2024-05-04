@@ -53,6 +53,16 @@
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result['total'];
     }
+
+    function get_all_my_post($id){
+        $conn = databaseConnection();
+        $stmt = $conn->prepare('SELECT * FROM posts WHERE USERID = ? ORDER BY post_date DESC');
+        $stmt->execute([$id]);
+        $user_posts = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+        return $user_posts; 
+    }
+    
+    
     
     
     

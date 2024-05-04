@@ -44,7 +44,7 @@ function template_sideNav($title){
                         <div class="sb-nav-link-icon"><i class="fa-regular fa-comment"></i></div>
                         Newsfeed
                     </a>
-                    <a class="nav-link ' . $profileClass . '" href="profile.php">
+                    <a class="nav-link ' . $profileClass . '" href="home.php">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                         Profile
                     </a>
@@ -72,7 +72,7 @@ function template_sideNav($title){
                         <div class="sb-nav-link-icon"><i class="fas fa-pen-to-square"></i></div>
                         Write Post
                     </a>
-                    <a class="nav-link ' . $profileClass . '" href="profile.php">
+                    <a class="nav-link ' . $profileClass . '" href="home.php">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                         Profile
                     </a>

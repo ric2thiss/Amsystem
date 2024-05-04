@@ -59,7 +59,7 @@
                                                 <td>'.$post["post_date"].'</td>
                                                     <td>
                                                     <a href="">Archive</a><br>
-                                                    <a href="">Delete</a>
+                                                    <a href="delete.php?id='.$_GET["id"].'">Delete</a>
                                                     </td>
                                             </td>
                                         </tr>

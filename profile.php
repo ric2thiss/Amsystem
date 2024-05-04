@@ -50,11 +50,11 @@
 
 ?>
 
-<?=template_header("Profile") ?>
+<?=template_header("Settings") ?>
     <body class="sb-nav-fixed">
         <?=template_topnav() ?>
         <div id="layoutSidenav">
-        <?=template_sideNav("profile")?>
+        <?=template_sideNav("settings")?>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">

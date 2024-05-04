@@ -4,7 +4,7 @@ include './functions/db.php';
 $id = $_GET["id"];
 if (approve_post($id)) {
     echo "<script>
-    alert('Post approved successfully!');  
+    alert('Post successfully back in pendings!');  
     setTimeout(function() {
         window.location = 'index.php';
     }, 500);
@@ -19,7 +19,7 @@ function approve_post($postId) {
 
     try {
   
-        $stmt = $conn->prepare('UPDATE posts SET POST_STATUS = 1 WHERE POST_ID = ?');
+        $stmt = $conn->prepare('UPDATE posts SET POST_STATUS = 0 WHERE POST_ID = ?');
         $stmt->execute([$postId]); 
 
 

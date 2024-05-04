@@ -20,7 +20,11 @@
             // Check message returned from write_post function
             if ($insertMsg === 'success') {
                 // Post inserted successfully
-                echo "<script>alert('Post inserted successfully!')</script>";
+                echo "
+                <script>
+                    alert('Post inserted successfully!')
+                    window.location = 'home.php';
+                </script>";
                 // You can redirect or perform other actions here
             } else {
                 // Failed to insert post
