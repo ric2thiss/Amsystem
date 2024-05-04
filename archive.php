@@ -2,7 +2,7 @@
 include './functions/db.php';
 
 $id = $_GET["id"];
-if (approve_post($id)) {
+if (archive_post($id)) {
     echo "<script>
     alert('Post successfully back in pendings!');  
     setTimeout(function() {
@@ -10,11 +10,11 @@ if (approve_post($id)) {
     }, 500);
 </script>";
 } else {
-    echo "Failed to approve post.";
+    echo "Failed to Archive post.";
     echo $id;
 }
 
-function approve_post($postId) {
+function archive_post($postId) {
     $conn = databaseConnection();
 
     try {
