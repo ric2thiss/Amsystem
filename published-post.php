@@ -58,7 +58,7 @@
                                         <td>'.$post["POST_DESCRIPTION"].'</td>
                                                 <td>'.$post["post_date"].'</td>
                                                     <td>
-                                                    <a href="">Archive</a><br>
+                                                    <a href="archive.php?id='.$_GET["id"].'">Archive</a><br>
                                                     <a href="delete.php?id='.$_GET["id"].'">Delete</a>
                                                     </td>
                                             </td>
