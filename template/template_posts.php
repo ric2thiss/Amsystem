@@ -2,8 +2,6 @@
 
 
 function get_all_post() {
-    // Retrieve user data
-    // $userData = get_account_all_information($_SESSION["user_id"]);
 
 
     $posts = getAllPost_published();

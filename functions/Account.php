@@ -69,8 +69,6 @@ function Login_Account($idNum, $password) {
 function get_account_name($idNum){
     
     $conn = databaseConnection();
-    $msg = '';
-
 
     $stmt = $conn->prepare('SELECT * from users WHERE USERS_ID_NUMBER = ?');
     $stmt->execute([$idNum]);
@@ -79,10 +77,11 @@ function get_account_name($idNum){
     if($user){
         return $user["USERS_FIRSTNAME"] . " " . $user["USERS_LASTNAME"];
     }else{
-        $msg = "Something went wrong!";
-        echo "<script>alert('$msg')</script>";
+        // Return a default value or handle the error in another way
+        return "User Not Found";
     }
 }
+
 
 function get_account_all_information($idNum){
     
