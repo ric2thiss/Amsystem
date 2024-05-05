@@ -20,7 +20,7 @@
 
 <style>
     .profile_container{
-        box-shadow: 0px 10px 15px 10px rgba(0,0,0,0.1);
+        box-shadow: 0px 10px 27px 0px rgba(0,0,0,0.1);
     }
 </style>
 
@@ -32,7 +32,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <div class="container profile_container mx-auto row mt-5">
+                        <div class="container profile_container border mx-auto row mt-5">
                             <div class=" d-flex align-items-center p-4">
                                 <img src="./assets/profile.webp" alt="profile" width="20%">
                                 <div class=" d-flex flex-column">
@@ -49,7 +49,7 @@
                         <ol class="breadcrumb mb-4 mt-4">
                             <li class="breadcrumb-item">Dashboard > Home </li>
                         </ol>
-                        <div class="p-3 row d-flex flex-col">
+                        <div class="p-3 row d-flex flex-col" style="box-shadow: 0px 10px 27px 0px rgba(0,0,0,0.1);">
                             <?php get_all_my_posts($_SESSION["user_id"]) ?>
                         </div>
     

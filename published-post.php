@@ -9,7 +9,7 @@
 
 ?>
 
-<?=template_header("Pending Post") ?>
+<?=template_header("Published Post") ?>
     <body class="sb-nav-fixed">
         <?=template_topnav() ?>
         <div id="layoutSidenav">
@@ -27,14 +27,14 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Pending Posts
+                                Published Posts
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                 <thead>
                                         <tr>
                                             <th>Post ID</th>
-                                            <th>USER ID</th>
+                                            <th>User ID</th>
                                             <th>Name</th>
                                             <th>Title</th>
                                             <th>Department</th>

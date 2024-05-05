@@ -11,6 +11,8 @@
 
     $userData = get_account_all_information($_SESSION["user_id"]);
 
+    // echo "<script>alert({$_SESSION["user_id"]})</script>";
+
     if(!$userData["isAdmin"] > 0){
        header("Location: newsfeed.php");
     }

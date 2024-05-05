@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $loginMsg = Login_Account($idNum, $password);
 
         if ($loginMsg === 'success') {
-            echo "<script>alert('$loginMsg')</script>";
+            // echo "<script>alert('$loginMsg')</script>";
             $_SESSION["user_id"] = $idNum;
             header('Location: index.php');
             exit();
