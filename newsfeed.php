@@ -21,7 +21,7 @@
     <body class="sb-nav-fixed">
         <?=template_topnav() ?>
         <div id="layoutSidenav">
-            <?=template_sideNav("newsfeed")?>
+            <?=template_sideNav("dashboard")?>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">

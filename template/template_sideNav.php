@@ -14,7 +14,8 @@ function template_sideNav($title){
     $profileClass = ($title == "profile") ? "active" : "";
     $publishedPostClass = ($title == "published-post") ? "active" : "";
     $newsfeedPostClass = ($title == "newsfeed") ? "active" : "";
-
+    $messageClass = ($title == "messages") ? "active" : "";
+    $membersClass = ($title == "users") ? "active" : "";
     $userData = get_account_all_information($_SESSION["user_id"]);
 
     if($userData["isAdmin"] > 0){
@@ -27,6 +28,10 @@ function template_sideNav($title){
                     <a class="nav-link  ' . $dashboardClass . '" href="index.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
+                    </a>
+                    <a class="nav-link ' . $membersClass . '" href="members.php">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
+                        Members
                     </a>
                     <a class="nav-link ' . $writePostClass . '" href="write-post.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-pen-to-square"></i></div>
@@ -47,6 +52,10 @@ function template_sideNav($title){
                     <a class="nav-link ' . $profileClass . '" href="home.php">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                         Profile
+                    </a>
+                    <a class="nav-link ' . $messageClass . '" href="message.php">
+                        <div class="sb-nav-link-icon"><i class="fa-solid fa-message"></i></div>
+                        Messages
                     </a>
                 </div>
             </div>
@@ -76,6 +85,10 @@ function template_sideNav($title){
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-user"></i></div>
                         Profile
                     </a>
+                    <a class="nav-link ' . $messageClass . '" href="message.php">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-message"></i></div>
+                    Messages
+                </a>
                 </div>
             </div>
             <div class="sb-sidenav-footer">
