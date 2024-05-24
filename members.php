@@ -6,8 +6,8 @@ include 'template/template_footer.php';
 include 'functions/Posts.php';
 include 'functions/Members.php';
 
-// $posts = getAllPost_admin();
-$users = numbers_of_users();
+
+$users = get_users_info();
 
 ?>
 
@@ -46,7 +46,7 @@ $users = numbers_of_users();
                                     <?php 
                                     foreach ($users as $user) {
                                         $userId = $user['USERID'];
-                                        $_GET['id'] = $userId;
+                                        $_GET['id'] = $user['USERS_ID_NUMBER'];
                                         $isAdmin = $user['isAdmin'];  // Assuming there's a field to check if the user is an admin
                                         $displayNone = $isAdmin ? 'style="display:none;"' : '';
                                         $nomessage = ($user['USERID'] == $_SESSION["user_id"]) ? 'style="display:none;"' : '';
@@ -60,7 +60,7 @@ $users = numbers_of_users();
                                             <td>' . htmlspecialchars($user["reg_date"], ENT_QUOTES, 'UTF-8') . '</td>
                                             <td>
                                                 <a href="make_admin.php?id=' . urlencode($userId) . '" ' . $displayNone . '>Make Admin</a><br>
-                                                <a href="message_user.php?id=' . $_GET['id'] .'" '.$displayNone.'>Message</a>
+                                                <a href="message_user.php?id=' . urlencode($userId) .'" '.$displayNone.'>Message</a>
                                             </td>
                                         </tr>';
                                     }

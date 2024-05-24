@@ -1,7 +1,7 @@
 <?php
     // include 'db.php';
 
-    function numbers_of_users(){
+    function get_users_info(){
         $conn = databaseConnection();
         $stmt = $conn->query('SELECT * FROM users');
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -58,6 +58,23 @@ function getMessagesForReceiver($receiver_id) {
         return [];
     }
 }
+
+function get_receiver($receiver_id) {
+    // Establish database connection
+    $conn = databaseConnection();
+    try {
+        // Prepare and execute query to get user ID
+        $stmt = $conn->prepare('SELECT USERID FROM users WHERE USERS_ID_NUMBER = ?');
+        $stmt->execute([$receiver_id]);
+        // Fetch user ID
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user['USERID']; // Return user ID
+    } catch (PDOException $e) {
+        // Handle database error
+        return null; // Return null in case of error
+    }
+}
+
 
 
     

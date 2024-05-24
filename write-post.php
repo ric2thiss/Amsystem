@@ -7,7 +7,7 @@
 
     $msgErr = '';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") { // Corrected REQUEST_METHOD condition
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
         $title = sanitize($_POST["title"]);
         $departmentOrg = sanitize($_POST["departmentOrg"]);
         $description = sanitize($_POST["description"]);

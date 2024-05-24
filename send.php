@@ -1,4 +1,5 @@
 <?php
+// TESTING
     use Infobip\Configuration;
     use Infobip\Api\SmsApi;
     use Infobip\Model\SmsDestination;

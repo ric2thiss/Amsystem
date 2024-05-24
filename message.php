@@ -5,13 +5,13 @@
     include 'template/template_footer.php';
     include 'functions/Members.php'; 
 
-    // Get the receiver ID from the session or any other source
     $receiver_id = $_SESSION['user_id'];
+    $receiver =  get_receiver($receiver_id);
 
 
 
     // Fetch messages for the specified receiver
-    $messages = getMessagesForReceiver($receiver_id);
+    $messages = getMessagesForReceiver($receiver);
 ?>
 
 <?= template_header("Message") ?>
@@ -30,7 +30,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                            <div class="list-group">
+                            <div class="list-group mb-3">
                                     <?php foreach ($messages as $message): ?>
                                         <?php echo '
                                         <a href="#" class="list-group-item list-group-item-action">
